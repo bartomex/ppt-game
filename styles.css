@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family:dragon;
+  src: url("tipografias/FunSized.ttf");
+}
+
+body {
+  background-color: black;
+  background-image: url("DragonBall/shenglong.jpg");
+  background-position: top;
+}
+
+header {
+  text-align: center;
+  vertical-align: top;
+}
+
+header img {
+  width: 500px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.return {
+  text-align: center;
+  vertical-align: top;
+  width: 80px;
+  display: none;
+
+  padding: 15px 20px;
+  font-size: 10px;
+  border-radius: 200px;
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
+
+  background-color:  rgba(25, 166, 218, 0.48);
+  color: white;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  border: 2px solid white;
+  text-align: right;
+}
+
+
+.menu li a {
+  /* position: absolute;
+  top: 40px;
+  right: 15px;
+  text-align: right;
+  width: 150px;
+  height: 40px;
+  border: 4px solid white;
+  border-radius: 150px;
+  color: white;
+  font-family: arial;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 10px;
+  list-style: none; */
+  /* margin-bottom: 50px; */
+
+}
+
+.menu li a:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+.submenu {
+  position: absolute;
+  width: 50%;
+}
+
+
+.rules-description {
+  /* display: block; */
+  font-size: 15px;
+  padding-top: 10px;
+  background-color: rgba(15, 15, 15, 0.62);
+  height: 100px;
+  border-radius: 10px;
+  font-family: Montserrat;
+  margin-top: 20px;
+  color: white;
+  /* visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.9s; */
+}
+
+
+
+.titulo {
+  text-align: center;
+  font-family: dragon;
+  background-color: rgba(226, 139, 9, 0.67);
+  border-radius: 50px;
+  color: white;
+  width: 70%;
+  font-size: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 100px;
+}
+
+.eleccion-jug1 {
+  text-align: center;
+  font-family: dragon;
+  background-color: rgba(226, 139, 9, 0.67);
+  border-radius: 50px;
+  color: white;
+  width: 70%;
+  font-size: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.poder {
+  cursor: pointer;
+  display: inline-block;
+  width: 80px;
+  vertical-align: top;
+  padding: 20px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.poder img {
+  width: 240px;
+  border: 5px solid #ccc;
+}
+
+.poder:hover {
+  transform: scale(1.3);
+}
+
+.poder.active {
+  transform: scale(1.3);
+}
+
+input {
+  display: none;
+  width: 5px;
+}
+
+.iniciar {
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 7px;
+  color: white;
+  margin-left: 10px;
+
+  background: #256EFF;
+  color: white;
+  font-weight: bold;
+  border-color: lightblue;
+  transition: 2s;
+}
+
+.iniciar:hover {
+  cursor: pointer;
+  background: lightblue;
+  color: white;
+}
+
+.eleccion-poderes {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.eleccion-poderes img {
+  vertical-align: top;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0px;
+  margin-bottom: 60px;
+  margin-right: 160px;
+  vertical-align: top;
+}
+
+h3 {
+  font-family: arial;
+  font-size: 25px;
+  text-align: center;
+  width: 200px;
+  color: white;
+  background-color: #FF101F;
+  margin-left: 25px;
+}
+
+.anuncio-ganador {
+  text-align: center;
+
+  display: none;
+    /*OJO: ESTE DISPLAY NONE ES PARA QUE NO SE VEAN LAS OTRAS PANTALLAS AL MISMO TIEMPO */
+}
+
+.zona-resultados {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.ganador {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: dragon;
+  font-size: 30px;
+  background-color: rgba(226, 139, 9, 0.67);
+  border-radius: 50px;
+  color: white;
+  width: 70%;
+}
+
+.vencedor {
+  width: 300px;
+  margin-bottom: 0px;
+}
+
+.player1-img,
+.player2-img {
+  width: 300px;
+  border: 4px solid black;
+}
+
+.player1-pick {
+  font-family: arial;
+  font-size: 30px;
+  background-color: #FF101F;
+  color: white;
+}
+
+.player2-pick {
+  font-family: arial;
+  font-size: 30px;
+  background-color: #FF101F;
+  color: white;
+}
+
+h4 {
+  font-family: fantasy;
+  font-size: 15px;
+  background-color: #256EFF;
+  color: white;
+}
+
+
+/*  JUEGO 1 VS 1 */
+
+.eleccion-jug2 {
+  text-align: center;
+  font-family: dragon;
+  background-color: rgba(226, 139, 9, 0.67);
+  border-radius: 50px;
+  color: white;
+  width: 70%;
+  font-size: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  display: none;
+}
+
+
+.ok {
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 7px;
+  color: white;
+  margin-left: 10px;
+
+  background: #256EFF;
+  color: white;
+  font-weight: bold;
+  border-color: lightblue;
+  transition: 2s;
+}
+
+.ok:hover {
+  cursor: pointer;
+  background: lightblue;
+  color: white;
+}
+
+.eleccion-jugador2 {
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+
+.final {
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 7px;
+  color: white;
+  margin-left: 10px;
+
+  background: #256EFF;
+  color: white;
+  font-weight: bold;
+  border-color: lightblue;
+  transition: 2s;
+}
+
+.final:hover {
+  cursor: pointer;
+  background: lightblue;
+  color: white;
+}
+
+.regresa {
+  text-align: center;
+  vertical-align: top;
+  width: 80px;
+  display: none;
+
+  padding: 15px 20px;
+  font-size: 10px;
+  border-radius: 400px;
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
+
+  background-color: rgba(25, 166, 218, 0.48);
+  color: white;
+  font-weight: bold;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  <meta charset="UTF-8">
+  <title>Juego de Dragon Ball Z - Dos jugadores</title>
+  <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+  <header>
+    <a title = "Inicio" href="index.html"><img src="DragonBall/logo.png" alt="logo"></a>
+    <button class="regresa" onclick= "location.href = 'vsOtroJugador.html'">Jugar de nuevo</button>
+  </header>
+
+    <article class="titulos">
+    <p class="eleccion-jug1">Jugador 1: Elige tu poder favorito</p>
+    <p class="eleccion-jug2">Jugador 2: Elige tu poder favorito</p>  <!-- Este aparece después -->
+  </article>
+
+<section class = "eleccion-poderes">    <!-- TIRO DEL JUG 1 -->
+
+    <form id="game-form">
+      <label class="poder" for = "hame-input">
+        <img src="DragonBall/Hamehameha.jpg" alt="hamehameha">
+        <h3>Hamehameha</h3>
+      </label>
+      <input id="hame-input" name="selection" type="radio" value="Hamehameha">
+
+      <label class="poder" for="kienzan-input">
+        <img src="DragonBall/Kienzan.jpg" alt="kienzan">
+        <h3>Kienzan</h3>
+      </label>
+      <input id="kienzan-input" name="selection" type="radio" value="Kienzan">
+
+      <label class="poder" for="bigbang-input">
+        <img src="DragonBall/BigBang.jpg" alt="bigbang">
+        <h3>Big Bang Attack</h3>
+      </label>
+      <input id="bigbang-input" name="selection" type="radio" value="BigBang">
+
+    </form>
+      <button class="ok" onclick="tiro1()">OK</button>
+
+  </section>
+
+
+  <section class="eleccion-jugador2">     <!-- AQUI VAN LAS OPCIONES DE ATAQUES JUG 2 -->
+
+    <form id="game-form2">
+      <label class="poder" for = "hame-input2">
+        <img src="DragonBall/Hamehameha.jpg" alt="hamehameha">
+        <h3>Hamehameha</h3>
+      </label>
+      <input id="hame-input2" name="selection" type="radio" value="Hamehameha">
+
+      <label class="poder" for="kienzan-input2">
+        <img src="DragonBall/Kienzan.jpg" alt="kienzan">
+        <h3>Kienzan</h3>
+      </label>
+      <input id="kienzan-input2" name="selection" type="radio" value="Kienzan">
+
+      <label class="poder" for="bigbang-input2">
+        <img src="DragonBall/BigBang.jpg" alt="bigbang">
+        <h3>Big Bang Attack</h3>
+      </label>
+      <input id="bigbang-input2" name="selection" type="radio" value="BigBang">
+
+    </form>
+    <button class="final" onclick="jugar()">¡A pelear!</button>  <!-- ESTE APARECE CUANDO EL JUG2 ESCOGIO PODER -->
+  </section>
+
+  <section class="anuncio-ganador">
+    <div class="quien-gano">
+      <h2 class="ganador"></h2>
+    </div>
+    <div class="zona-resultados">
+      <article class="resultado">
+        <img class="player1-img" src="" alt="jugador 1">
+        <p class="player1-pick"></p>
+        <h4>Jugador 1</h4>
+      </article>
+
+      <img class="vencedor" src="DragonBall/esferaas.png" alt="gano">
+      <article class="victoria">
+        <img class="player2-img" src="" alt="jugador 2">
+        <p class="player2-pick"></p>
+        <h4>Jugador 2</h4>
+      </article>
+
+    </div>
+  </section>
+
+  <audio class="audios" src="audios/dragon-ball.mp3"></audio>
+  <audio class="salto" src="audios/jump.mp3"></audio>
+
+  <script src="scriptsUnoVsUno.js"></script>
+  </body>
+</html>
